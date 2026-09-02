@@ -191,9 +191,9 @@ Outputs: top of stack = transaction version
 
 Opcode number 101, hex `0x65`
 
-Compares the top of stack with the executing transaction's version as a greater than or equals comparison as part of the following traditional if-then-else expression: `OP_VERIF [statements] [OP_ELSE [statements]] OP_ENDIF`
+Compares the top of stack with the executing transaction's version as an equivalence comparison as part of the following expression: `OP_VERIF [statements] [OP_ELSE [statements]] OP_ENDIF`
 
-Logically equivalent to `OP_VER OP_GREATERTHANOREQUAL OP_IF`.
+Logically equivalent to `OP_VER OP_EQUAL OP_IF`.
 
 ```
 Inputs: comparison value -> top of stack. 
@@ -203,10 +203,10 @@ Inputs: comparison value -> top of stack.
 
 Opcode number 102, hex `0x66`
 
-Compares the top of stack with the executing transaction's version as a greater than or equals comparison as part of the following expression:\
+Compares the top of stack with the executing transaction's version as an equivalence comparison as part of the following expression:\
 `OP_VERNOTIF [statements] [OP_ELSE [statements]] OP_ENDIF`
 
-Logically equivalent to `OP_VER OP_GREATERTHANOREQUAL OP_NOTIF`
+Logically equivalent to `OP_VER OP_EQUAL OP_NOTIF`
 
 ```
 Inputs: comparison value -> top of stack
